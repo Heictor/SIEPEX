@@ -1,0 +1,30 @@
+fun = @rastrigin;
+nvars = 2;
+[x,fval,exitflag,output,population,scores] = ga(fun,nvars)
+
+
+figure(5)
+hold on
+x = population(:,1);
+y = population(:,1);
+[x,y] = meshgrid(x,y);
+%
+% f = fun;
+% % 
+% surf(x,y,f,'EdgeColor','none');
+colormap(hsv);
+colorbar;
+shading interp;
+alpha 0.1;
+% gene
+% scatter3( ...
+%           pop(length(pop)-population_size-1:length(pop),1), ...
+%           pop(length(pop)-population_size-1:length(pop),2), ...
+%           population_fitness( length(population_fitness)-population_size-1:length(population_fitness) )/1000, ...
+%           60,'*','k');
+scatter3()
+% 
+legend('Espaço de Busca','Indivíduos')
+title('Geração Finsl')
+grid on
+hold off
